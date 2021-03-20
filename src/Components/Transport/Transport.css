@@ -1,0 +1,23 @@
+.transport-area img{
+    height: 150px;
+    width: 250px;
+    
+}
+.transport-area{
+    box-shadow: 3px 3px 5px gray;
+    padding-bottom:100px;
+    width: 250px;
+   text-align: center;
+   background-color:white;
+   margin-top: 200px;
+}
+.transport-area h4{
+    text-align: center;
+    margin-top: 20px;
+}
+.background{
+    background-image: url('../../images/background.jpg');
+    height: 100vh;
+     background-size: cover;
+     
+}

@@ -1,0 +1,19 @@
+[{
+    "id": 1,
+    "name": "BIKE",
+        "img": "https://www.drivespark.com/images/2020-07/2020-bmw-s-1000-xr-30.jpg"
+
+    
+  }, {
+    "id": 2, 
+    "name": "CAR",
+    "img": "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_large/v1/editorial/story/hero_image/2019-Porsche-911-coupe-red-press-image-1001x565p-%281%29.jpg"
+  }, {
+    "id": 3, 
+    "name": "BUS",
+    "img": "https://www.electrive.com/wp-content/uploads/2020/01/rafako-elektrobus-electric-bus-2020-07-min.png"
+  }, {
+    "id": 4,
+    "name": "TRAIN",
+    "img": "https://static.toiimg.com/photo/77548457.cms"
+  }]

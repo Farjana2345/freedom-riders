@@ -1,0 +1,36 @@
+[{
+    "id": 1,
+    "name": "BIKE",
+    "ticket":2,
+    "amount":150,
+    "img": "https://www.drivespark.com/images/2020-07/2020-bmw-s-1000-xr-30.jpg",
+    "img1": "https://images-na.ssl-images-amazon.com/images/I/61FMbYqZVxL._SY355_.jpg",
+    "img2": "https://www.cycleworld.com/resizer/2vAjHPwMg-x4X_ucfDDlNehJCQE=/760x570/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/BLXCWAD3BVHPDFWIQO5PNMT5UA.jpg"
+
+    
+    
+  }, {
+    "id": 2, 
+    "name": "CAR",
+    "ticket":4,
+    "amount":350,
+    "img": "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_large/v1/editorial/story/hero_image/2019-Porsche-911-coupe-red-press-image-1001x565p-%281%29.jpg",
+    "img1":"https://images.unsplash.com/photo-1597404294360-feeeda04612e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FyfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80",
+    "img2":"https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/images/car-reviews/first-drives/legacy/98_-_fastest_accelerating_road_cars_-_ferrari_f8_tributo.jpg?itok=cK2YYgq2"
+  }, {
+    "id": 3, 
+    "name": "BUS",
+    "ticket":2,
+    "amount":250,
+    "img": "https://www.electrive.com/wp-content/uploads/2020/01/rafako-elektrobus-electric-bus-2020-07-min.png",
+    "img1":"https://ichef.bbci.co.uk/news/976/cpsprodpb/4597/production/_110451871_bus2.jpg",
+    "img2":"https://www.student.liu.se/studenttjanster/campusbussen/campusbussen/1.763528/campusbussen-ny.jpg"
+  }, {
+    "id": 4,
+    "name": "TRAIN",
+    "ticket":8,
+    "amount":400,
+    "img": "https://static.toiimg.com/photo/77548457.cms",
+    "img1": "https://static.bangkokpost.com/media/content/20191010/c1_1769069.jpg",
+    "img2":"https://c.files.bbci.co.uk/F76E/production/_115224336_mediaitem115224335.jpg"
+  }]

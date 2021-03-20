@@ -1,0 +1,25 @@
+.image img{
+    width: 100px;
+    height: 60px;
+}
+.image{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 20px;
+    grid-gap: 20px;
+    justify-content: center;
+}
+.text{
+
+  margin-top: 20px;
+}
+.details-area{
+    background-color: lavender;
+    width: 430px;
+    padding:40px;
+}
+.background-image{
+    background-color: white;
+    margin-top:20px;
+    padding-bottom: 20px;
+}

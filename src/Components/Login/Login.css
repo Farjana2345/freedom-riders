@@ -1,0 +1,16 @@
+.loginForm input{
+    width: 420px;
+    padding: 10px 0px;
+    margin-top: 20px;
+}
+.login-area{
+    border: 1px solid;
+    text-align: center;
+    width: 500px;
+    padding: 30px;
+}
+.login-area1{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
