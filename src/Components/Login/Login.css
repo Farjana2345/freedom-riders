@@ -14,3 +14,11 @@
     align-items: center;
     display: flex;
 }
+.loginSubmitButton{
+    background-color: #41B3A3;
+    padding: 15px 0px;
+    border: none;
+    color:white;
+    font-size: 20px;
+    font-weight: 700;
+}

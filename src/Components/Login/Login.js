@@ -148,24 +148,24 @@ const Login = () => {
                     <h1>{newUser?'Create an Account' : 'Login'}</h1> 
                      
                     <form className ="loginForm" onSubmit={handleFormSubmit}>
-                        {newUser && <input type="text" name ="name" onBlur={handleOnBlur} placeholder="Your name.."/>}
+                        {newUser && <input type="text" name ="name" onBlur={handleOnBlur} placeholder=" Your name.."/>}
                         <br/>
                         <input type="text" name="email" onBlur={handleOnBlur} placeholder="Your Email address" required/>
                         {
-                            !validForm.validEmailField && <p>email not matched</p>
+                            !validForm.validEmailField && <p>Your Email is not matched</p>
                         }
                         
                         <br/>
-                        <input type="password" name="password" onBlur={handleOnBlur} placeholder="Your password" required/>
+                        <input type="password" name="password" onBlur={handleOnBlur} placeholder=" Your password" required/>
                         {
-                            !validForm.validPasswordField && <p>password not matched</p>
+                            !validForm.validPasswordField && <p>password not Matched</p>
                         }
                         <br/>
-                        {newUser && <input type="password" name="confirmPassword" onBlur={handleOnBlur} placeholder="Confirm Your password" required/>}
+                        {newUser && <input type="password" name="confirmPassword" onBlur={handleOnBlur} placeholder=" Confirm Your password" required/>}
                         {
-                            !validForm.fieldPassword && <p>password not matched</p>
+                            !validForm.fieldPassword && <p>Confirm password not matched</p>
                         }
-                        <input type="submit" value={newUser ? 'Create an account' : 'Log In'}/>
+                        <input className="loginSubmitButton" type="submit" value={newUser ? 'Create an account' : 'Log In'}/>
                     </form>
                     <p style={{fontSize:'20px'}}>{newUser ?'Already have an account ?' : 'Dont have an account ?'} <span style={{color:'blue',fontSize:'15px'}} onClick={()=>setNewUser(!newUser)}>{newUser ?' log in':'Create an Account'}</span></p>
                     <p style={{color:'red'}}>{user.error}</p>
