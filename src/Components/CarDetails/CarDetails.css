@@ -1,25 +1,24 @@
-.image img{
+ .image img{
     width: 100px;
     height: 60px;
 }
 .image{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    margin-top: 20px;
-    grid-gap: 20px;
+    box-shadow: 5px 5px 5px silver;
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    margin-top:-40px;
+}
+.image h4{
+    margin-left: 20px;
     justify-content: center;
+    align-items: center;
+    display: flex;
 }
-.text{
 
-  margin-top: 20px;
-}
 .details-area{
     background-color: lavender;
     width: 430px;
     padding:40px;
 }
-.background-image{
-    background-color: white;
-    margin-top:20px;
-    padding-bottom: 20px;
-}
+ 
