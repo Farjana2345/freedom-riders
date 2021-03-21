@@ -1,4 +1,5 @@
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
 import './App.css';
 import Header from './Components/Header/Header';
 import {
@@ -14,6 +15,7 @@ import Destination from './Components/Destination/Destination';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import NotMatched from './Components/NotMatched/NotMatched';
 
+
 export const UserContext=createContext();
 
 function App() {
@@ -21,13 +23,14 @@ function App() {
   return (
     <UserContext.Provider value ={[loggedInUser, setLoggedInUser]}>
     <Router>
+     
       <Header></Header>
     <Switch>
           <Route path="/home">
             <Home/>
           </Route>
           <Route path="/login">
-           <Login></Login>
+            <Login></Login>
           </Route>
           <PrivateRoute path="/destination/:name">
             <Destination></Destination>

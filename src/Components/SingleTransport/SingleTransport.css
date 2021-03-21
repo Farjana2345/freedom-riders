@@ -1,8 +1,9 @@
 .place {
-    background-color: salmon;
+    background-color: #70bdc2;
     width: 430px;
     padding: 20px 0px;
     text-align: center;
+    color: white;
 }
 .searchBtn{
     background-color: #41B3A3;
@@ -11,4 +12,8 @@
     color: white;
     font-size: 25px;
     font-weight: 800px;
+}
+label{
+    color: #01345B;
+    font-weight:bold;
 }

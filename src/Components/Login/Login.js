@@ -36,18 +36,23 @@ const Login = () => {
     if (firebase.apps.length === 0) {
         firebase.initializeApp(firebaseConfig);
      }
-    const provider = new firebase.auth.GoogleAuthProvider();
+   
+     var provider = new firebase.auth.GoogleAuthProvider();
     const handleGoogleSignIn=()=>{
+        
         firebase.auth().signInWithPopup(provider)
             .then(res=>{
-                const newUserInfo = {...user}
-                newUserInfo.error = '';
-                newUserInfo.success = true;
-                newUserInfo.login=true;
-                setUser(newUserInfo);
-                setLoggedInUser(newUserInfo);
+                const{displayName,email}=res.user;
+                const signedInUser={
+                    isSignedIn:true,
+                    name:displayName,
+                    email:email
+                }
+                setUser(signedInUser);
                 updateUserInfo(user.name);
+                setLoggedInUser(signedInUser);
                 history.replace(from);
+                console.log(displayName,email);
             })
             .catch((error) => {
                 var errorMessage = error.message;
@@ -118,6 +123,7 @@ const Login = () => {
                     newUserInfo.success = true;
                     newUserInfo.login=true;
                     setLoggedInUser(newUserInfo);
+                    updateUserInfo(user.name);
                     setUser(newUserInfo); 
                     history.replace(from);
                 })
@@ -142,38 +148,42 @@ const Login = () => {
           });
     }
     return (
-        <div className="row">
-            <div className="col-md-12 login-area1">
-                <div className="login-area">
-                    <h1>{newUser?'Create an Account' : 'Login'}</h1> 
-                     
-                    <form className ="loginForm" onSubmit={handleFormSubmit}>
-                        {newUser && <input type="text" name ="name" onBlur={handleOnBlur} placeholder=" Your name.."/>}
-                        <br/>
-                        <input type="text" name="email" onBlur={handleOnBlur} placeholder="Your Email address" required/>
-                        {
-                            !validForm.validEmailField && <p>Your Email is not matched</p>
-                        }
+        <div className="login-background">
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12 login-area1 mt-5">
+                        <div className="login-area">
+                            <h1 style={{color:'#3CBCC3'}}>{newUser?'Create an Account' : 'Login'}</h1> 
+                            
+                            <form className ="loginForm" onSubmit={handleFormSubmit}>
+                                {newUser && <input type="text" name ="name" onBlur={handleOnBlur} placeholder=" Your name.."/>}
+                                <br/>
+                                <input type="text" name="email" onBlur={handleOnBlur} placeholder="Your Email address" required/>
+                                {
+                                    !validForm.validEmailField && <p>Your Email is not matched</p>
+                                }
+                                
+                                <br/>
+                                <input type="password" name="password" onBlur={handleOnBlur} placeholder=" Your password" required/>
+                                {
+                                    !validForm.validPasswordField && <p>password not Matched</p>
+                                }
+                                <br/>
+                                {newUser && <input type="password" name="confirmPassword" onBlur={handleOnBlur} placeholder=" Confirm Your password" required/>}
+                                {
+                                    !validForm.fieldPassword && <p>Confirm password not matched</p>
+                                }
+                                <input className="loginSubmitButton" type="submit" value={newUser ? 'Create an account' : 'Log In'}/>
+                            </form>
+                            <p style={{fontSize:'20px'}}>{newUser ?'Already have an account ?' : 'Dont have an account ?'} <span style={{color:'blue',fontSize:'15px'}} onClick={()=>setNewUser(!newUser)}>{newUser ?' log in':'Create an Account'}</span></p>
+                            <p style={{color:'red'}}>{user.error}</p>
+                            {user.success && <p style={{color:'Green'}}>You account {newUser ? 'created' : 'logged in'}  successfully </p> }
                         
-                        <br/>
-                        <input type="password" name="password" onBlur={handleOnBlur} placeholder=" Your password" required/>
-                        {
-                            !validForm.validPasswordField && <p>password not Matched</p>
-                        }
-                        <br/>
-                        {newUser && <input type="password" name="confirmPassword" onBlur={handleOnBlur} placeholder=" Confirm Your password" required/>}
-                        {
-                            !validForm.fieldPassword && <p>Confirm password not matched</p>
-                        }
-                        <input className="loginSubmitButton" type="submit" value={newUser ? 'Create an account' : 'Log In'}/>
-                    </form>
-                    <p style={{fontSize:'20px'}}>{newUser ?'Already have an account ?' : 'Dont have an account ?'} <span style={{color:'blue',fontSize:'15px'}} onClick={()=>setNewUser(!newUser)}>{newUser ?' log in':'Create an Account'}</span></p>
-                    <p style={{color:'red'}}>{user.error}</p>
-                    {user.success && <p style={{color:'Green'}}>You account {newUser ? 'created' : 'logged in'}  successfully </p> }
-                  
-                   
-                    <button onClick={handleGoogleSignIn}><FontAwesomeIcon icon={faGoogle} /> Google sign in</button>
-                   
+                        
+                            <button onClick={handleGoogleSignIn}><FontAwesomeIcon icon={faGoogle} /> Google sign in</button>
+                        
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 import './Destination.css';
 import SingleTransport from '../SingleTransport/SingleTransport';
+
+
 export class Destination extends Component {
     render() {
       return (
     <div className="container">
-        <div className="row">
+        <div className="row mt-5">
             <div className="col-md-6">
                 
                 <SingleTransport></SingleTransport>
             </div>
             <div className="col-md-6">
-                <Map style={{width:'520px',height:'500px'}} google={this.props.google} zoom={14}>
+                <Map style={{width:'525px',height:'500px'}} google={this.props.google} zoom={14}>
     
                     <Marker onClick={this.onMarkerClick}
                             name={'Current location'} />
